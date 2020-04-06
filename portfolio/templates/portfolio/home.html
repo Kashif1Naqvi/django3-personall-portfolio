@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>Hello this is my portfolio!</h1>
+    {% for post in posts %}
+        <h1>{{post.title}}</h1>
+        <p>{{post.description}}</p>
+        <img src="{{post.image.url}}" height="auto" width="500" />
+    {% endfor %}
+</body>
+</html>
