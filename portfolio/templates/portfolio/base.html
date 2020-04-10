@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
     <link rel="stylesheet" href="{% static 'portfolio/bootstrap.min.css' %} " integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,42 +14,101 @@
 </head>
 <body>
     <video autoplay muted loop id="myVideo">
-        <source src="{% static 'portfolio/bg.mp4' %}" type="video/mp4">
+        <source src="{% static 'portfolio/bgImg.mp4' %}" type="video/mp4">
         Your browser does not support HTML5 video.
       </video> 
     <div class="container-fluid">
-        <div class="row no-gutters">
-            <div class="mb-5 col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
-                <nav class="navbar navbar-expand-md navbar-light bg-info fixed-top" style="background-color:#f1f1f1 !important;" >
-                    <button class="navbar-toggler" type="button" data-target="#nav" data-toggle="collapse"  aria-label="Togge navigation"
-                            aria-expanded="false" aria-controls="nav"  >
-                        <span class="navbar-toggler-icon  " ></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="nav" >
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="{% static 'portfolio/Resume.pdf' %}" >Resume</a></li>
-                            <li class="nav-item text-dark" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="https://twitter.com/naqvishah582" >Twitter</a></li>
-                        </ul>
-                        <ul class="navbar-nav text-center ">
-                            <li class="nav-item text-dark" >
-                                <a href="/" class="navbar-brand text-dark font-weight-bold nav-link ">Portfolio</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ml-auto" >
-                            <li class="nav-item text-dark" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="https://www.linkedin.com/in/syed-kashif-8b48a015b/" >Linkdin</a></li>
-                            <li class="nav-item text-dark" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="{% url 'blog:all_blogs' %}" >Blog</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
         {% block content  %}{% endblock content %}      
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<footer class="page-footer font-small mt-5 pt-4" style="background-color: #293335; opacity: .7; "   >
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto text-light">
+  
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About me</h5>
+          <p>I create possibilities for the connected world.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase text-light mt-3 mb-4">Explore</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a target="_blank" class="text-light font-weight-bold" href="{% static 'portfolio/Resume.pdf' %}" >Resume</a>
+            </li>
+            <li>
+							<a href="/" class=" text-light font-weight-bold ">Portfolio</a>
+						</li>
+            <li>
+              <a target="_blank" class="text-light font-weight-bold" href="{% url 'blog:all_blogs' %}" >Blog</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+       
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase text-light mt-3 mb-4">Follow</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://twitter.com/naqvishah582" target="_blank" ><img width="40" src="https://img.icons8.com/ios-filled/50/000000/twitter.png"/></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/syed-kashif-8b48a015b/" target="_blank" ><img width="40" src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/></a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <hr>
+  
+   
+    <!-- Call to action -->
+  
+    <hr>
+  
+  
+    <!-- Social buttons -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-light py-3">© 2020 Copyright</div>
+    <!-- Copyright -->
+  
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

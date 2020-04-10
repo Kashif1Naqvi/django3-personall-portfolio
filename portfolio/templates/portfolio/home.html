@@ -1,36 +1,53 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 {% block content %}
-	<div class="text-center container " >
-		<h2 class="text-center font-weight-bold text-light " >My awersome portfolio</h2>
-		<div class="row mb-2">
+	<div class="text-center container" >
+		<div class="row mb-5 mt-5">
 			<div class="col-6 p-1 mt-3 text-light" data-aos="flip-up" data-aos-duration="3000" style=" border:steelblue white 1px; box-shadow:0px 5px 10px  white; ">
-				<div class="mt-5" >
+				<div class="mt-5 p-2 " >
 					<h1 class="display-5  " >Hi! I am Syed Kashif</h1>
 					<p>A Web Developer who creates UX rich <br> performant websites and web applications.</p>
 				</div>
 			</div>
-			<div class="col-6 p-1 mt-3" data-aos="flip-left" data-aos-duration="3000" style=" border:steelblue white 1px; box-shadow:0px 5px 10px  white; ">
+			<div class="col-6 p-1 mt-3 p-2" data-aos="flip-left" data-aos-duration="3000" style=" border:steelblue white 1px; box-shadow:0px 5px 10px  white; ">
 				<img src="{% static 'portfolio/images/1582950408526.jpg' %}" class="img-fluid rounded-circle mr-auto ml-auto " style="display:block; " width=200 height=200  />
 			</div>
 		</div>
-		<h1 class="text-center text-light " >Projects</h1>
-		<hr class="bg-info" >
+		<div data-aos="fade-down"
+		data-aos-easing="linear"
+		data-aos-duration="1500" data-aos-duration="2000">
+			<button type="button" class="btn btn-outline-success btn-lg" data-toggle="modal" data-target=".bd-example-modal-lg">Hire me</button>
+		</div>
+		<div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-md">
+				<div class="modal-content p-5	">
+				 <h1 class="font-weight-bold text-center " >Curriculum Vitae</h1>
+				 <hr >
+				 <p>Grab My CV to find out more about me.</p>
+				 <a class="btn btn-info btn-lg" href="{% static 'portfolio/Resume.pdf' %}">Download</a>
+				 <div class="mt-4  " >
+					<button type="button" class="btn btn-outline-success btn-lg flaot-right" data-dismiss="modal">Exit</button>
+				 </div>
+				</div>
+			</div>
+		</div>
+		<h1 class="text-center text-light mt-5">Projects</h1>
+		<hr class="bg-info mt-5" >
 		<div class="row">
 			{% for project in projects %}
 				<div class="col-12 col-md-4 col-lg-4 col-xl-4  ">
 					<div class="text-light">
 						<h4>{{project.title}}</h4>
-						<p>{{project.description|truncatechars:20 }}</p>
+						<p>{{project.description|truncatechars:50 }}</p>
 					</div>
-					<div class="mt-3" >
+					<div class="mt-3 mb-3" >
 						<div  data-aos="fade-down"
 						data-aos-easing="linear"
 						data-aos-duration="1500" data-aos-duration="2000" >
 							<img src="{{project.image.url}}" class="img-rounded  p-2"  width=300 height=300 /><br>
 						</div>
 						{% if project.url %}
-							<a target="_blank"  class="btn btn-info" href="{{project.url}}" >Demo Here..</a>
+							<a target="_blank"  class="btn btn-outline-success " href="{{project.url}}" >Demo Here..</a>
 						{% endif %}
 					</a>
 					</div>

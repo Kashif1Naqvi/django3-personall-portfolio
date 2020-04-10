@@ -10,7 +10,7 @@
         <div class="card-body">
             <h5 class="card-title">{{post.title | truncatechars:20 }}</h5>
             <p class="card-text">{{post.description| truncatechars:40 }}</p>
-            <a href="{% url 'blog:detail' post.id %}" class="btn btn-info">See more</a>
+            <a href="{% url 'blog:detail' post.id %}" class="btn btn-outline-success ">See more</a>
         </div>
     </div>  
     </div>
