@@ -1,0 +1,19 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<h1 class="display-5 font-weight-bold mt-5 mb-5 text-center text-light">Blog posts</h1>
+<div class="row" >
+    {% for post in posts %}
+    <div class="col-12 col-sm-4 col-md-4 col-xl-4 col-lg-4 p-3" data-aos="fade-down"
+		data-aos-easing="linear" data-aos-duration="1500" data-aos-duration="2000"  >
+        <div class="card">
+        <h5 class="card-header">Created at {{post.date}}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{post.title | truncatechars:20 }}</h5>
+            <p class="card-text">{{post.description| truncatechars:40 }}</p>
+            <a href="{% url 'blog:detail' post.id %}" class="btn btn-info">See more</a>
+        </div>
+    </div>  
+    </div>
+     {% endfor %}
+</div>
+{% endblock content %}

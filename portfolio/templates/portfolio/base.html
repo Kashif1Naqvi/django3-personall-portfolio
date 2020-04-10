@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'portfolio/bootstrap.min.css' %} " integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+    <title>Kashif | Portfolio</title>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'portfolio/bg.mp4' %}" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video> 
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="mb-5 col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                <nav class="navbar navbar-expand-md navbar-light bg-info fixed-top" style="background-color:#f1f1f1 !important;" >
+                    <button class="navbar-toggler" type="button" data-target="#nav" data-toggle="collapse"  aria-label="Togge navigation"
+                            aria-expanded="false" aria-controls="nav"  >
+                        <span class="navbar-toggler-icon  " ></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav" >
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="{% static 'portfolio/Resume.pdf' %}" >Resume</a></li>
+                            <li class="nav-item text-dark" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="https://twitter.com/naqvishah582" >Twitter</a></li>
+                        </ul>
+                        <ul class="navbar-nav text-center ">
+                            <li class="nav-item text-dark" >
+                                <a href="/" class="navbar-brand text-dark font-weight-bold nav-link ">Portfolio</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto" >
+                            <li class="nav-item text-dark" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="https://www.linkedin.com/in/syed-kashif-8b48a015b/" >Linkdin</a></li>
+                            <li class="nav-item text-dark" ><a target="_blank" class="text-dark nav-link font-weight-bold" href="{% url 'blog:all_blogs' %}" >Blog</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        {% block content  %}{% endblock content %}      
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
