@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_62ag5%8o62_p_y-)tfc!$s42s6or04*v89zmx0l5qgf&$w4i@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['syed.pythonanywhere.com']
 
@@ -124,3 +124,9 @@ STATIC_ROOT = os.path.join(BASE_DIR , 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 MEDIA_URL  = '/media/'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("You must be on production mode!")
